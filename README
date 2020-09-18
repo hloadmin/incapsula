@@ -1,0 +1,27 @@
+Add and onboard URL to Incapsula WAF portal
+======
+**incaponboard.py** is a script for onboarding a HTTP/HTTPS URL to incapsula with Python with healthy defaults.
+Built and Tested on PYthon3.8
+
+Requirements"
+boto3 - Use pip3 install boto3
+
+Need AWS Access keys on your local path. Refer to AWS Documentation for steps. Does not support AWS profiles currently, happy for you to make relevant changes in boto3 section. 
+AWS permissions: Route53 List Hosted zones, List and modify Resource record sets. We will be enumerating all zones to identify the HostedZoneID and will be editing the TXT records. 
+
+#Imperva API access and credentials.
+api_key = "xxxxxxxxxxxxxxx"
+api_id = "xxxxx"
+api_url = "https://my.incapsula.com/api/prov/v1/sites"
+
+## Currently set as a variable within main. Ideal to move it as ENV variable. 
+```
+$ ./incaponboard.py FQDN ZONE
+ 
+ Output and verbosity can be adjusted within the code. 
+
+$ 
+```
+## Version 
+* Version 0.1
+
